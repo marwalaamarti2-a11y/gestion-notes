@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "TP1 Gestion Notes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" }
+  ],
+  "item": [
+    {
+      "name": "1. Ajouter Etudiant - Sara Alaoui",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Alaoui\",\n  \"prenom\": \"Sara\",\n  \"note1\": 15,\n  \"note2\": 13,\n  \"coef1\": 1,\n  \"coef2\": 1\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/etudiants", "host": ["{{baseUrl}}"], "path": ["etudiants"] }
+      }
+    },
+    {
+      "name": "2. Ajouter Etudiant - Omar Benani",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Benani\",\n  \"prenom\": \"Omar\",\n  \"note1\": 9,\n  \"note2\": 8,\n  \"coef1\": 1,\n  \"coef2\": 1\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/etudiants", "host": ["{{baseUrl}}"], "path": ["etudiants"] }
+      }
+    },
+    {
+      "name": "3. Ajouter Etudiant - Lina Idrissi",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nom\": \"Idrissi\",\n  \"prenom\": \"Lina\",\n  \"note1\": 17,\n  \"note2\": 16,\n  \"coef1\": 1,\n  \"coef2\": 1\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/etudiants", "host": ["{{baseUrl}}"], "path": ["etudiants"] }
+      }
+    },
+    {
+      "name": "4. Affichage Notes",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/etudiants", "host": ["{{baseUrl}}"], "path": ["etudiants"] }
+      }
+    },
+    {
+      "name": "5. Rechercher Etudiant",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/etudiants/recherche?nom=Alaoui&prenom=Sara",
+          "host": ["{{baseUrl}}"],
+          "path": ["etudiants", "recherche"],
+          "query": [
+            { "key": "nom", "value": "Alaoui" },
+            { "key": "prenom", "value": "Sara" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "6. Etudiants Admis",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/etudiants/admis", "host": ["{{baseUrl}}"], "path": ["etudiants", "admis"] }
+      }
+    },
+    {
+      "name": "7. Liste Rattrapage",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/etudiants/rattrapage", "host": ["{{baseUrl}}"], "path": ["etudiants", "rattrapage"] }
+      }
+    },
+    {
+      "name": "8. Majorant",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/etudiants/majorant", "host": ["{{baseUrl}}"], "path": ["etudiants", "majorant"] }
+      }
+    },
+    {
+      "name": "9. Liste Triee",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/etudiants/tries", "host": ["{{baseUrl}}"], "path": ["etudiants", "tries"] }
+      }
+    }
+  ]
+}
